@@ -11,6 +11,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -105,7 +106,9 @@ class MainActivity : ComponentActivity() {
                             LaunchedEffect(key1 = permissions) {
                                 launcherMultiplePermissions.launch(permissions)
                             }
-                            Text(text = "location permission required")
+                            Box(modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center){
+                            Text(text = "location permission required")}
                         }
 
                         homeViewModel.getCurrentWeather(
