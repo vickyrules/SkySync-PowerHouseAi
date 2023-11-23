@@ -15,16 +15,19 @@ interface ApiService {
     suspend fun fetchCurrentWeather(
         @Query("lat") latitude: Double,
         @Query("lon") longitude: Double,
+        @Query("units") unit: String = "metric",
     ): ApiResponse
 
     /**
      *https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
      */
     @GET("data/2.5/weather")
-    suspend fun fetchCurrentWeatherCitu(
+    suspend fun fetchCurrentWeatherBYCity(
         @Query("q") city: String,
+        @Query("units") unit: String = "metric"
     ): ApiResponse
+
 
 }
 
-//"http://openweathermap.org/img/w/" + iconcode + ".png";
+//"http://openweathermap.org/" + iconcode + ".png";

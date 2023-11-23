@@ -90,7 +90,7 @@ dependencies {
     val moshiVersion = "1.15.0"
     implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
     ksp("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
-
+    implementation("com.google.code.gson:gson:2.8.8")
     /*--------------------------------okhttp3-------------------------------------*/
     val okHttpVersion = "4.11.0"
     implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
@@ -100,16 +100,17 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
-    //room
+    /*---------------------------------------------room----------------------------*/
     val room_version = "2.6.0"
 
-//    implementation("androidx.room:room-runtime:$room_version")
-//    annotationProcessor("androidx.room:room-compiler:$room_version")
-//    // To use Kotlin Symbol Processing (KSP)
-//    ksp("androidx.room:room-compiler:$room_version")
-//
-//    // optional - Kotlin Extensions and Coroutines support for Room
-//    implementation("androidx.room:room-ktx:$room_version")
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    // To use Kotlin Symbol Processing (KSP)
+    kapt("androidx.room:room-compiler:$room_version")
+
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
 
     /*--------------------------------compose-------------------------------------*/
     //animation
@@ -128,6 +129,18 @@ dependencies {
     //compose-navigation
     val composeNavigationVersion = "2.7.1"
     implementation("androidx.navigation:navigation-compose:$composeNavigationVersion")
+
+    // GMS - Google Mobile Services
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+
+    // Permissions
+    implementation("com.google.accompanist:accompanist-permissions:0.31.1-alpha")
+
+
+
+    /*--------------------------------Coil-------------------------------------*/
+    val composeCoilVersion = "2.4.0"
+    implementation("io.coil-kt:coil-compose:$composeCoilVersion")
 }
 
 // Allow references to generated code
