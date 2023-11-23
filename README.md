@@ -3,7 +3,7 @@
 The purpose of this assignment is to create a simple App to display the current weather forecast
 using the OpenWeatherMap free weather API.
 
-|![perm](./media/permissions.jpg) | ![home](./media/home.jpg)| ![gif](./media/gif.gif) |
-|---|---|---|
+| <img src = "./media/permissions.jpg"/> | <img src = "./media/home.jpg"/> | <img src = "./media/gif.gif"/> |
+|----------------------------------------|---------------------------------|--------------------------------|
 
-[Download apk](./media/app-debug.apk)
+[Download apk](https://drive.google.com/file/d/1J_14YlVB1BS5FS2pUufsftoddEtHCEFx/view?usp=sharing)
